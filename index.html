@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>IP Address Validator</h1>
+    <input type="text" id="IPAddress" placeholder="Enter your IP Address here">
+    <input type="button" value="Validate" id="btn">
+    <h1 id="display"></h1>
+    <script>
+        const btn = document.querySelector("#btn");
+        const IPAddress= document.querySelector("#IPAddress");
+        const display = document.querySelector("#display")
+
+        btn.addEventListener("click", findAMatch);
+
+        function findAMatch(){
+            let IP = IPAddress.value;
+           
+
+            let pattern = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/g;
+
+            if (pattern.test(IP)) {
+                display.innerHTML = "This is a valid IP Address!";
+            }else {
+                display.innerHTML = "This is not a valid IP Address!";
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
