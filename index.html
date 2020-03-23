@@ -26,9 +26,11 @@
             let pattern = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/g;
 
             if (pattern.test(IP)) {
-                display.innerHTML = "This is a valid IP Address!";
+                display.innerHTML = "This is a valid IP Address!" ;
+                display.style.color = "blue"
             }else {
                 display.innerHTML = "This is not a valid IP Address!";
+                display.style.color = "red"
             }
 
         }
